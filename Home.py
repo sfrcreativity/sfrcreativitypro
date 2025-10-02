@@ -20,7 +20,7 @@ def load_lottieurl(url):
 # Load Lottie animation from a local JSON file
 def load_lottie_file(filepath: str):
     try:
-        with open("animation.json", "r", encoding="utf-8") as f:
+        with open(str, "r", encoding="utf-8") as f:
             lottie_json = json.load(f)
             st_lottie(lottie_json, height=300, key="safe")
     except Exception as e:
@@ -66,7 +66,7 @@ with st.container():
             Brief description of the project. This project involved using Python and SQL to analyze data and provide insights.
             """
         )
-        st.markdown("[View Project >]( ")
+        st.markdown("[View Project >]")
 
 
 
