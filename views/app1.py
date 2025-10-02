@@ -1,6 +1,9 @@
 import streamlit as st
 
 
+# Page title
+st.title("🚀 Modern Streamlit Layout")
+st.write("---")
 # Set page config
 st.set_page_config(
     page_title="Modern Streamlit App",
@@ -9,11 +12,8 @@ st.set_page_config(
 )
 
 # Sidebar
-st.sidebar.title("Navigation")
-st.sidebar.markdown("Use the sidebar to navigate.")
-
-# Page title
-st.title("🚀 Modern Streamlit Layout")
+#st.sidebar.title("Navigation")
+#st.sidebar.markdown("Use the sidebar to navigate.")
 
 # Tabs
 tab1, tab2, tab3 = st.tabs(["📊 Dashboard", "📁 Data", "⚙️ Settings"])

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 …or create a new repository on the command line
 echo "# sfrcreativitypro" >> README.md
 git init
@@ -12,6 +11,5 @@ git push -u origin main
 git remote add origin https://github.com/sfrcreativity/sfrcreativitypro.git
 git branch -M main
 git push -u origin main
-=======
-# sfrcreativitypro
->>>>>>> b9e613245f90ae37d319e44e48ac5379d874f303
+
+git push origin main --force

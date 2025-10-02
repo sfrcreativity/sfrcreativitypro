@@ -1,14 +1,15 @@
+
 import requests
 import streamlit as st
 import json
 from streamlit_lottie import st_lottie
-st.set_page_config(page_title="Home", page_icon="🏠")
-st.title("🏠 Home")
-st.markdown("Welcome to the professional dashboard.")
 
-
-# find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
-st.set_page_config(page_title="Home", page_icon=":tada:", layout="wide")
+st.title("Streamlit Multi-Page App")
+st.set_page_config(
+    page_title="Modern Streamlit App",
+    layout="wide",  # Use "centered" for traditional layout
+    initial_sidebar_state="expanded"
+)
 
 # Load Lottie animation from a URL
 def load_lottieurl(url):
@@ -20,16 +21,16 @@ def load_lottieurl(url):
 # Load Lottie animation from a local JSON file
 def load_lottie_file(filepath: str):
     try:
-        with open(str, "r", encoding="utf-8") as f:
+        with open(filepath, "r", encoding="utf-8") as f:
             lottie_json = json.load(f)
-            st_lottie(lottie_json, height=300, key="safe")
+            return lottie_json  # Return the loaded JSON
     except Exception as e:
         st.error(f"Failed to load animation: {e}")
+        return None
 
 # ---- Load Assets ----
-
 #lottie_coding = load_lottieurl("Coding_boy.json")
-lottie_coding = load_lottie_file("Coding_boy.json")
+lottie_coding = load_lottie_file("assets\Coding_boy.json")
 
 
 
@@ -64,10 +65,9 @@ with st.container():
         st.write(
             """
             Brief description of the project. This project involved using Python and SQL to analyze data and provide insights.
-            """
-        )
+            """)
         st.markdown("[View Project >]")
 
-
-
-
+# Footer
+st.markdown("---")
+st.markdown("Built with ❤️ using Streamlit")

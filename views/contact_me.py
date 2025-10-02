@@ -1,5 +1,9 @@
 import streamlit as st
 
+
+# Page title
+st.title("Contact Me")
+st.write("---")
 st.set_page_config(page_title="Contact", layout="centered")
 st.write("We'd love to hear from you! Fill out the form below:")
 
